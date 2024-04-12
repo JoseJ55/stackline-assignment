@@ -1,7 +1,5 @@
 import './Nav.css';
 
-import React from 'react';
-
 import logo from './../../assets/stackline_logo.svg';
 
 export default function Nav() {

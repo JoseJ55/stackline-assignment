@@ -1,12 +1,11 @@
 #nav {
     background-color: var(--nav-background);
-    min-width: 50px;
-    width: 100%;
+    width: 98%;
     padding: 1%;
 }
 
 #stackLine-logo {
     width: 10%;
-    min-height: 20px;
-    max-height: 25px;
+    min-height: 15px;
+    max-height: 20px;
 }
