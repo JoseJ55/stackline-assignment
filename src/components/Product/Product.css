@@ -1,11 +1,15 @@
 #product {
-    width: 21%;
-    height: 92%;
+    width: 96%;
+    height: fit-content;
     max-height: 90vh;
-    position: sticky;
+    position: relative;
     top: 0%;
     display: flex;
+    display: -webkit-box; /* Old WebKit browsers */
+    display: -ms-flexbox; /* IE 10 */
     flex-direction: column;
+    -webkit-box-orient: vertical; /* Old WebKit browsers */
+    -ms-flex-direction: column; /* IE 10 */
     justify-content: flex-start;
     align-items: center;
     background-color: var(--section-background);
@@ -14,7 +18,8 @@
 }
 
 #product-image {
-    width: 60%;
+    width: 30%;
+    min-width: 140px;
 }
 
 #product-title {
@@ -33,13 +38,18 @@
 }
 
 #product-tags {
-    width: 100%;
+    width: 90%;
+    height: fit-content;
     display: flex;
+    display: -webkit-box; /* Old WebKit browsers */
+    display: -ms-flexbox; /* IE 10 */
     flex-wrap: wrap;
+    -webkit-box-orient: horizontal; /* Old WebKit browsers */
+    -ms-flex-wrap: wrap; /* IE 10 */
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .product-tag {
@@ -49,4 +59,26 @@
     margin: 0;
     border: solid var(--light-border-color) 2px;
     border-radius: 5px;
+}
+
+@media screen and (min-width: 520px) {
+    #product-image {
+        width: 30%;
+    }
+    #product-tags {
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    #product {
+        width: 21%;
+        height: 92%;
+        position: sticky;
+        position: -webkit-sticky; /* for Safari */
+    }
+    #product-image {
+        width: 60%;
+    }
 }

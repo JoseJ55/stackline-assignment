@@ -1,5 +1,5 @@
 import './Table.css'; // CSS
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // Arrow SVG for table titles
 import downArrow from './../../assets/down-chevron-svgrepo-com.svg';
