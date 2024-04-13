@@ -31,15 +31,15 @@
 
 #graph-labels ul {
     width: 100%;
-    display: flex;
     display: -webkit-box; /* Old WebKit browsers */
     display: -ms-flexbox; /* IE 10 */
-    justify-content: space-between;
+    display: flex;
     -webkit-box-pack: justify; /* Old WebKit browsers */
     -ms-flex-pack: justify; /* IE 10 */
-    align-items: center;
+    justify-content: space-between;
     -webkit-box-align: center; /* Old WebKit browsers */
     -ms-flex-align: center; /* IE 10 */
+    align-items: center;
 }
 
 #graph-labels li {

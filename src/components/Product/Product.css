@@ -1,15 +1,16 @@
 #product {
     width: 96%;
     height: fit-content;
+    min-height: 50vh;
     max-height: 90vh;
     position: relative;
     top: 0%;
-    display: flex;
     display: -webkit-box; /* Old WebKit browsers */
     display: -ms-flexbox; /* IE 10 */
-    flex-direction: column;
+    display: flex;
     -webkit-box-orient: vertical; /* Old WebKit browsers */
     -ms-flex-direction: column; /* IE 10 */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background-color: var(--section-background);
@@ -40,12 +41,12 @@
 #product-tags {
     width: 90%;
     height: fit-content;
-    display: flex;
     display: -webkit-box; /* Old WebKit browsers */
     display: -ms-flexbox; /* IE 10 */
-    flex-wrap: wrap;
+    display: flex;
     -webkit-box-orient: horizontal; /* Old WebKit browsers */
     -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
@@ -75,8 +76,8 @@
     #product {
         width: 21%;
         height: 92%;
-        position: sticky;
         position: -webkit-sticky; /* for Safari */
+        position: sticky;
     }
     #product-image {
         width: 60%;

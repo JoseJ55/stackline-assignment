@@ -1,12 +1,12 @@
 #app {
   width: 100vw;
   height: 100vh;
-  display: flex;
   display: -webkit-box; /* Old WebKit browsers */
   display: -ms-flexbox; /* IE 10 */
-  flex-direction: column;
+  display: flex;
   -webkit-box-orient: vertical; /* Old WebKit browsers */
   -ms-flex-direction: column; /* IE 10 */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
@@ -18,12 +18,12 @@
   background-color: var(--body-background);
   padding: 3% 2%;
   position: relative;
-  display: flex;
   display: -webkit-box; /* Old WebKit browsers */
   display: -ms-flexbox; /* IE 10 */
-  flex-direction: column;
+  display: flex;
   -webkit-box-orient: vertical; /* Old WebKit browsers */
   -ms-flex-direction: column; /* IE 10 */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2%;
@@ -32,12 +32,12 @@
 #product-stats {
   width: 100%;
   min-height: 100%;
-  display: flex;
   display: -webkit-box; /* Old WebKit browsers */
   display: -ms-flexbox; /* IE 10 */
-  flex-direction: column;
+  display: flex;
   -webkit-box-orient: vertical; /* Old WebKit browsers */
   -ms-flex-direction: column; /* IE 10 */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 4rem;
@@ -45,9 +45,9 @@
 
 @media screen and (min-width: 640px) {
   #product-details {
-    flex-direction: row;
     -webkit-box-orient: horizontal; /* Old WebKit browsers */
     -ms-flex-direction: row; /* IE 10 */
+    flex-direction: row;
   }
 
   #product-stats {
