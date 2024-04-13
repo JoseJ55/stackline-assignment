@@ -1,32 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../../app/store";
 
-interface reviewStructure {
-    customer: string,
-    review: string,
-    score: number,
-}
-
-interface salesStructure {
-    weekEnding: string,
-    retailSales: number,
-    wholesaleSales: number,
-    unitsSold: number,
-    retailerMargin: number
-}
-
-interface productStructure {
-    id: string,
-    title: string,
-    image: string,
-    subtitle: string,
-    brand: string,
-    reviews: reviewStructure[],
-    retailer: string,
-    details: string[],
-    tags: string[],
-    sales: salesStructure[],
-}
+import { productStructure } from "../../models/products.interfaces";
 
 interface ProductState {
     allProducts: productStructure[]

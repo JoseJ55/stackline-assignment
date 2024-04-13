@@ -5,13 +5,11 @@ import downArrow from './../../assets/down-chevron-svgrepo-com.svg';
 
 import { useAppSelector } from '../../app/hooks';
 
-interface salesStructure {
-    weekEnding: string,
-    retailSales: number,
-    wholesaleSales: number,
-    unitsSold: number,
-    retailerMargin: number
-}
+import { salesStructure } from '../../models/products.interfaces';
+
+import formatDate from '../../utils/formateDate';
+import formatPrice from '../../utils/formatPrice';
+import formatUnits from '../../utils/formatUnits';
 
 export default function Table() {
     const { currentProduct } = useAppSelector((state) => state.product);
@@ -23,26 +21,6 @@ export default function Table() {
     useEffect(() => {
         setSortedData(currentProduct?.sales ?? []);
     }, [currentProduct?.sales])
-
-    const formatDate = (date: string) => {
-        const [year, month, day] = date.split('-')
-
-        return `${month}-${day}-${year}`;
-    }
-
-    const formatUnits = (amount: number) => {
-        const formattedAmount = amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-        return formattedAmount;
-    }
-
-    const formatPrice = (amount: number) => {
-        const [integerPart] = amount.toFixed(2).toString().split('.');
-
-        const formattedIntegerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-        return `$${formattedIntegerPart}`;
-    }
 
     const handleSort = (columnName: keyof salesStructure) => {
         const newSortedData = [...sortedData];
