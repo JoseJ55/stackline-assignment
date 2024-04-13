@@ -11,7 +11,27 @@
 }
 
 #graph-container {
-    width: 100%;
-    height: 100%;
+    width: 96%;
+    height: 82%;
     position: relative;
+    padding: 2%
+}
+
+#graph-labels {
+    width: 100%;
+    padding: 1% 0;
+    border-top: solid var(--light-border-color) 1px;
+}
+
+#graph-labels ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#graph-labels li {
+    list-style: none;
+    font-size: 1rem;
+    color: var(--sub-text-color);
 }
