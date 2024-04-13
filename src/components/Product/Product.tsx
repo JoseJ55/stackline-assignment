@@ -1,17 +1,12 @@
-import './Product.css';
-import { useEffect } from 'react';
+import './Product.css'; // CSS
 
+// Redux
 import { useAppSelector } from '../../app/hooks';
 
+// THe production section with details on the product and name of teh main product looking.
 export default function Product() {
-    const { allProducts, currentProduct, isError, isLoading } = useAppSelector((state) => state.product);
-
-    useEffect(() => {   
-        console.log('all', allProducts);
-        console.log('current', currentProduct);
-        console.log('loading', isLoading);
-        console.log('error', isError);
-    }, [allProducts, currentProduct, isLoading, isError]);
+    // Redux selector holding the current product.
+    const { currentProduct } = useAppSelector((state) => state.product);
 
     return (
         <div id='product'>

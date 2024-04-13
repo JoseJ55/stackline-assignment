@@ -1,6 +1,7 @@
-import './Graph.css';
+import './Graph.css'; // CSS
 import React from 'react'
 
+// Chart JS
 import { Line } from 'react-chartjs-2';
 import {
     Chart,
@@ -8,23 +9,33 @@ import {
     registerables
 } from 'chart.js';
 
+// Redux
 import { useAppSelector } from '../../app/hooks';
 
+// Chart JS override
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;
 
+// Chart JS register
+// This allow the chart to be rendered.
 Chart.register(...registerables)
 
+// The visual chart fo the data for retail sales.
 export default function Graph() {
+    // Redux Selector
     const { currentProduct } = useAppSelector((state) => state.product);
 
-    const retailSalesData = currentProduct?.sales.map((sale) => sale?.retailSales);
-    const wholesaleSalesData = currentProduct?.sales.map((sale) => sale?.wholesaleSales);
-    const labels = currentProduct?.sales.map((sale) => sale?.weekEnding);
+    const retailSalesData = currentProduct?.sales.map((sale) => sale?.retailSales); // Sales for the current product
+    const wholesaleSalesData = currentProduct?.sales.map((sale) => sale?.wholesaleSales); // Wholesales for the current product
     
+    // This is for the x axis and where the points will be on the chart.
+    const labels = currentProduct?.sales.map((sale) => sale?.weekEnding); // Dates for the current products
+    
+    // Data object for the chart
     const data = {
         labels: labels,
         datasets: [
+            // Settings for both lines
             {
                 label: 'Retail Sales',
                 data: retailSalesData,
@@ -50,10 +61,13 @@ export default function Graph() {
         ]
     }
 
+    // Variable of the max value of the dataset
     const maxValue = Math.max(...retailSalesData ?? [], ...wholesaleSalesData ?? []);
 
+    // Chart option object
     const options = {
         scales: {
+            // Doesn't display grid and labels
             x: {
                 display: false,
                 grid: {
@@ -67,23 +81,31 @@ export default function Graph() {
             },
         },
         plugins: {
+            // Doesn't show legend
             legend: {
                 display: false
             },
+            // Make intersect of the pointer
             tooltip: {
                 intersect: false,
             }
         },
     }
 
+    // Manually rendering the title and the month labels for the chart
+    // Note: Easier to control the styles of the chart and make is both independent from each other.
     return (
         <div id='graph'>
             <h3 id='graph-title'>Retail Sales</h3>
+            
             <div id='graph-container'>
-                <Line
-                    data={data}
-                    options={options}
-                />
+                <div id='graph-chart'>
+                    <Line
+                        data={data}
+                        options={options}
+                    />
+                </div>
+
                 <div id='graph-labels'>
                     <ul>
                         <li>JAN</li>

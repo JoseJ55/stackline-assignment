@@ -17,8 +17,14 @@
     padding: 2%
 }
 
+#graph-chart {
+    width: 100%;
+    height: 99%;
+}
+
 #graph-labels {
     width: 100%;
+    height: 1%;
     padding: 1% 0;
     border-top: solid var(--light-border-color) 1px;
 }

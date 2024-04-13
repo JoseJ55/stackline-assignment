@@ -1,3 +1,8 @@
+/*
+File to hold the typescript interfaces so they can be used within the project.
+(Note: Since this is a pseudo api they are all in this one file.)
+*/
+
 export interface reviewStructure {
     customer: string,
     review: string,

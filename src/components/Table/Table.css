@@ -37,5 +37,5 @@
 
 .title-arrow {
     width: 10px;
-    transition: transform;
+    transition: transform 200ms ease-in-out;
 }
