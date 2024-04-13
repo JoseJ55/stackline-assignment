@@ -22,7 +22,7 @@ export default function Product() {
 
             <div id='product-tags'>
                 {currentProduct?.tags.map((tag) => (
-                    <p id='product-tag'>{tag}</p>
+                    <p className='product-tag'>{tag}</p>
                 ))}
             </div>
         </div>

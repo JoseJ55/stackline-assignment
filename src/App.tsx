@@ -8,8 +8,10 @@ import { setProducts } from './features/product/productSlice';
 
 import Nav from './components/Nav/Nav';
 import Product from './components/Product/Product';
+import Graph from './components/Graph/Graph';
+import Table from './components/Table/Table';
 
-function App() {
+export default function App() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -26,9 +28,12 @@ function App() {
 
       <div id='product-details'>
         <Product />
+
+        <div id='product-stats'>
+          <Graph />
+          <Table />
+        </div>
       </div>
     </div>
   )
 }
-
-export default App
