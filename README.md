@@ -16,4 +16,4 @@ The page comprises three key components: product details, a retail sales chart, 
 ## Links
 Check out the [GitHub](https://github.com/JoseJ55/stackline-assignment)
 
-Preview the website
+Preview the [website](https://josej55.github.io/stackline-assignment/)
