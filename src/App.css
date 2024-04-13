@@ -13,4 +13,5 @@
   flex-grow: 1;
   background-color: var(--body-background);
   padding: 3% 2%;
+  position: relative;
 }
