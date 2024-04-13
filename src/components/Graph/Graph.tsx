@@ -1,5 +1,4 @@
 import './Graph.css'; // CSS
-import React from 'react'
 
 // Chart JS
 import { Line } from 'react-chartjs-2';
@@ -97,7 +96,7 @@ export default function Graph() {
     return (
         <div id='graph'>
             <h3 id='graph-title'>Retail Sales</h3>
-            
+
             <div id='graph-container'>
                 <div id='graph-chart'>
                     <Line
