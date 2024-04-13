@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# StackLine Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+A landing page designed for efficient data management. The website operates with a JSON file containing data, and to mimic API functionality, it employs Redux with useEffect upon the initial rendering of the page. The default selection from the JSON file is automatically displayed.
 
-Currently, two official plugins are available:
+For enhanced scalability, additional data can be seamlessly incorporated, albeit necessitating the creation of additional components to facilitate user selection of desired products. Notably, Redux requires no further updates, as all data is preloaded.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The page comprises three key components: product details, a retail sales chart, and a sales table. While the product details section is straightforward, the chart, developed with [Chart.js](https://www.chartjs.org/docs/latest/), vividly illustrates retail sales data. The dynamically expandable sales table adjusts according to data volume and offers sorting functionality across all columns.
 
-## Expanding the ESLint configuration
+## Tools
+* React
+* Redux
+* TypeScript
+* [Chart.js](https://www.chartjs.org/docs/latest/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Links
+Check out the [GitHub](https://github.com/JoseJ55/stackline-assignment)
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Preview the website
