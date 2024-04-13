@@ -1,5 +1,41 @@
 #table {
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
     background-color: var(--section-background);
+}
+
+#table-table {
+    width: 98%;
+}
+
+.table-row {
+    width: 100%;
+}
+
+.table-cell {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: end;
+    padding: 1% 2%;
+    border-bottom: solid var(--light-border-color) 1px;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+}
+
+.title-cell {
+    font-weight: normal !important;
+    padding: 2% !important;
+}
+
+.title-cell:hover {
+    cursor: pointer;
+}
+
+.date-cell {
+    text-align: start !important;
+}
+
+.title-arrow {
+    width: 10px;
+    transition: transform;
 }
